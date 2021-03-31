@@ -17,7 +17,7 @@ Note: you should tweak the mysql container to allow connections with username an
 you may need to restart the container too with ```docker restart mysql```.
 
 ## Why ?
-The main goal of this project is to have a base enviroment for further developments. The technologies used in this project are : Nextjs (with typescript) for develop a frontend, node (with typescript) + express + typeORM for developr a backend, mongodb and mysql.
+The main goal of this project is to have a base enviroment for further developments. The technologies used in this project are: Nextjs (with typescript) for develop a frontend, node (with typescript) + express + typeORM for developr a backend, mongodb and mysql.
 
 ## Where is used Docker & Docker Compose
 In the root directory we have a ```docker-compose.yml``` file, wich tells how we want to build the containers on docker.
