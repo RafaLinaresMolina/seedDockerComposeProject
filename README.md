@@ -1,5 +1,11 @@
 # Base enviroment for develop an app using Docker containers and Docker Compose.
 
+## Requeriments and how to start the project
+
+You need installed Docker and Docker Compose.
+Once Installed, go to the root folder of the project on a terminal and type:
+- ```docker-compose build``` (this may take some time the first time)
+- ```docker-compose up```
 
 ## Why ?
 The main goal of this project is to have a base enviroment for further developments. The technologies used in this project are : Nextjs (with typescript) for develop a frontend, node (with typescript) + express + typeORM for developr a backend, mongodb and mysql.
