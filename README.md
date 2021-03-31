@@ -10,7 +10,7 @@ It provides:
 - The links between the containters
 - The ports fordwarding between the container and the host 
 - The default password of mysql
-- The volumes for the two containers we need to mantain persistent (idk you but I like my data on databases being persistent and se the changes on the code on the fly).
+- The volumes for the two containers we need to mantain persistent (idk you but I like my data on databases being persistent and see the changes on the code on the fly).
 
 ```Dockerfiles``` located in the subfolders indicate what to do with the container wich basicly is to install dependencies and start the services of node.
 
