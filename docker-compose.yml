@@ -1,0 +1,39 @@
+version: "3.8"
+services: 
+  front:
+    container_name: front
+    restart: always
+    build: ./front/
+    volumes:
+      - ./front/:/data/front
+    ports:
+      - "3000:3000"
+    links:
+      - back:back
+  back:
+    container_name: back
+    restart: always
+    build: ./back/.
+    volumes:
+      - ./back/:/data/back
+    ports:
+      - "5000:5000"
+    links:
+      - mongo:mongo
+      - mysql:mysql
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes: 
+      - ./:/data/mongodb
+    ports:
+      - "27017:27017"
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    volumes:
+      - ./:/data/mysqldb
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Your_Password_Goes_Here...
