@@ -1,13 +1,8 @@
-import { EntitySchema } from 'typeorm';
-
-export interface User {
-    id: number;
-    firstName: string;
-    lastName: string;
-    age: number;
-}
-
-export const UserEntity = new EntitySchema<User>({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserEntity = void 0;
+var typeorm_1 = require("typeorm");
+exports.UserEntity = new typeorm_1.EntitySchema({
     name: 'user',
     columns: {
         id: {
@@ -26,3 +21,4 @@ export const UserEntity = new EntitySchema<User>({
         }
     }
 });
+//# sourceMappingURL=User.js.map
