@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  front:
+    environment:
+      NODE_ENV: dev
+    env_file:
+      - ./front/.development.env
+    links:
+      - back:back
+  back:
+    environment:
+      NODE_ENV: dev
+    env_file:
+      - ./back/.development.env
+    links:
+      - mongo-dev:mongo-dev
+      - postgres-dev:postgres-dev
+  postgres-dev:
+    image: postgres:11.10
+    container_name: postgres-dev
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER= #setYourUSerForPostgreSQL
+      - POSTGRES_PASSWORD= #setYourPasswordForPostgreSQL
+  mongo-dev:
+    container_name: mongo
+    image: mongo
+    volumes: 
+      - ./:/data/mongodb
+    ports:
+      - "27018:27018"
+

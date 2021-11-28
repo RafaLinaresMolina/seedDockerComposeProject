@@ -1,0 +1,39 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+./back/node_modules
+./front/node_modules
+./front/.pnp
+.pnp.js
+
+# testing
+./back/coverage
+./front/coverage
+
+# next.js
+./front/.next/
+./front/out/
+
+# production
+./front/build
+./back/dist
+docker-compose.**.yml
+
+# misc
+./front/.DS_Store
+./front/*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+./front/logs/
+./back/logs/
+
+# local env files
+./back/.development.env
+./front/.development.env
+
+# vercel
+./back/.vercel
+./front/.vercel
