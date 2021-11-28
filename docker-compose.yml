@@ -5,21 +5,22 @@ services:
     image: node:16
     container_name: front
     working_dir: /data/front
+    command: bash -c "yarn install && yarn dev"
     restart: always
-    build: ./front/
     volumes:
       - ./front/:/data/front/
-      - /data/front/node_modules/
+      - ./front/node_modules/:/data/front/node_modules/
+      - ./front/.next/:/front/back/.next/
     ports:
       - "3000:3000"
   back:
     image: node:16
     container_name: back
     working_dir: /data/back
+    command: bash -c "yarn install && yarn dev"
     restart: always
-    build: ./back/
     volumes:
       - ./back/:/data/back/
-      - /data/back/node_modules/
+      - ./back/node_modules/:/data/back/node_modules/
     ports:
       - "5000:5000"
