@@ -24,3 +24,12 @@ services:
       - ./back/node_modules/:/data/back/node_modules/
     ports:
       - "5000:5000"
+  # blockchaindb:
+  #   image: bigchaindb:2.2.2
+  #   container_name: blockchaindb
+  #   working_dir: /data/blockchaindb
+  #   restart: always
+  #   volumes:
+  #     - ./blockchaindb/:/data/blockchaindb/
+  #   ports:
+  #     - "9984:9984"
